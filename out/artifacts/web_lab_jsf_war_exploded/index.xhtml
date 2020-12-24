@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+
+<h:head>
+    <title>Лабораторная работа №4</title>
+    <h:outputStylesheet library="css" name="indexStyle.css"  />
+<!--    <link rel="stylesheet" type="text/css" href="css/indexStyle.css"/>-->
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+</h:head>
+
+<h:body>
+    <f:view>
+        <h:panelGrid styleClass="wrapper">
+            <h:form styleClass="form">
+                <h:panelGrid layout="block" styleClass="pageTitle title">Удаление начальных символов</h:panelGrid>
+                <h:panelGrid layout="block"
+                             styleClass="secondaryTitle title">Удаление начальных символов (первый аргумент – строка, второй –
+                    количество символов, которые надо удалить,
+                    результат – уменьшенная строка)
+                </h:panelGrid>
+                <h:inputText type="text"
+                             id="inputString"
+                             styleClass="inputString formEntry"
+                             validatorMessage="Строка не должна быть пустой!"
+                             a:placeholder="Введите строку"
+                             value="#{task.inputString}"
+                             name="inputString"
+                             title="Введите строку"
+                             required="true"/>
+                <h:inputText type="number"
+                             id="cutLength"
+                             styleClass="cutLength formEntry"
+                             validatorMessage="Число должно быть положительным"
+                             a:placeholder="Введите число"
+                             value="#{task.cutLength}"
+                             name="cutLength"
+                             title="Введите число"
+                             required="true"/>
+<!--                    <f:validator validatorId="CutLengthValidator"/>-->
+<!--                </h:inputText>-->
+                <h:commandButton styleClass="submit formEntry" action="${task.cutString()}" type="submit" value="Подтвердить"/>
+            </h:form>
+        </h:panelGrid>
+    </f:view>
+</h:body>
+
+
+</html>

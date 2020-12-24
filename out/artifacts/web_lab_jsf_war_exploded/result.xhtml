@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+<h:head>
+    <h:outputStylesheet name="" />
+    <title>Лабораторная работа №4</title>
+    <h:outputStylesheet library="css" name="resultStyle.css"  />
+<!--    <link rel="stylesheet" type="text/css" href="resources/css/resultStyle.css"/>-->
+    <c:if test="${task.cutString() == null}">
+        <meta http-equiv="refresh" content="5; url=index.xhtml; charset=UTF-8"/>
+    </c:if>
+</h:head>
+
+<h:body>
+    <f:view>
+        <h:panelGrid styleClass="wrapper" rendered="${task.cutString() != null}">
+            <h:form styleClass="form">
+                <h:panelGrid styleClass="pageTitle title">Удаление начальных символов</h:panelGrid>
+                <h:panelGrid styleClass="name">Исходная строка:</h:panelGrid>
+                <h:inputText class="value" id="inputString"
+                             value="${task.inputString}"/>
+                <h:panelGrid class="name">Количество обрезаемых символов:</h:panelGrid>
+                <h:inputText class="value" id="cutLength"
+                             value="${task.cutLength}"/>
+                <h:panelGrid class="name">Полученная строка:</h:panelGrid>
+                <h:inputText class="value" id="outputString"
+                             value="${task.outputString}"/>
+                <h:panelGroup layout="block">
+                    <h:commandButton styleClass="returnButton hrefColor" action="#{task.returnToIndexPage}"
+                                     value="Возврат на исходную страницу"/>
+                </h:panelGroup>
+            </h:form>
+        </h:panelGrid>
+        <h:panelGrid styleClass="wrapper" rendered="${task.cutString() == null}">
+            <h:form styleClass="form">
+                <h:panelGrid styleClass="pageTitle title"><p>Произошла ошибка! <br/> <br/>Вы сейчас будете перенаправлены обратно</p></h:panelGrid>
+                <h:panelGroup layout="block">
+                    <h:outputLink styleClass="returnButton hrefColor" value="index.xhtml">На главную</h:outputLink>
+                </h:panelGroup>
+            </h:form>
+        </h:panelGrid>
+    </f:view>
+</h:body>
+
+</html>

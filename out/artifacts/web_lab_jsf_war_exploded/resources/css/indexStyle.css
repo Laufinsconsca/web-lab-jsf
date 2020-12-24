@@ -1,0 +1,102 @@
+/*@import "form.css";*/
+
+body {
+    background-color: #d1f3e7;
+}
+
+.form {
+    background: #fff;
+    box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
+    border-radius: 5px;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    left: 0;
+    right: 0;
+    position: absolute;
+    border-top: 5px solid #0e3721;
+}
+
+.name{
+    display: block;
+    font-family: sans-serif;
+    margin: 10px auto;
+    width: 300px;
+}
+
+.hrefColor {
+    color: white;
+}
+
+.hrefColor:visited {
+    color: red;
+}
+
+.hrefColor:active {
+    color: yellow;
+}
+
+.title{
+    display: block;
+    font-family: sans-serif;
+    margin: 10px auto 5px;
+    width: 300px;
+}
+
+.pageTitle{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.secondaryTitle{
+    color: grey;
+}
+
+.inputString {
+    background-color: #ebebeb;
+}
+
+.inputString:hover {
+    border-bottom: 5px solid #0e3721;
+    height: 30px;
+    width: 380px;
+    transition: ease 0.5s;
+}
+
+.cutLength {
+    background-color: #ebebeb;
+}
+
+.cutLength:hover {
+    border-bottom: 5px solid #0e3721;
+    height: 30px;
+    width: 380px;
+    transition: ease 0.5s;
+}
+
+.formEntry {
+    display: block;
+    margin: 30px auto;
+    min-width: 300px;
+    padding: 10px;
+    border-radius: 2px;
+    border: none;
+    transition: all 0.5s ease 0s;
+}
+
+.submit {
+    width: 320px;
+    margin: 30px auto;
+    color: white;
+    background-color: #0e3721;
+    font-size: 20px;
+}
+
+.submit:hover {
+    box-shadow: 15px 15px 15px 5px rgba(78, 72, 77, 0.219);
+    transform: translateY(-3px);
+    width: 300px;
+    border-top: 5px solid #0e3750;
+    border-radius: 0;
+}

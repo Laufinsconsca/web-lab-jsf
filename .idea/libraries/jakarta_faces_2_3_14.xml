@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jakarta.faces-2.3.14">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../Program Files/Apache Software Foundation/TomEE 9.0.0/lib/jakarta.faces-2.3.14.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
